@@ -1,0 +1,722 @@
+html{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    width: 100vw;
+}
+body > *{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#topcontact{
+    margin: 0;
+    padding: 1% 9%;
+    background-color: whitesmoke;
+    display:grid;
+    grid-template-columns: repeat(3, auto);
+    grid-row: repeat(2, 1fr);
+    grid-column-gap: 11%;
+    grid-row-gap: 12;
+}
+.icon{
+    max-width:100%;
+}
+.big{
+    width: 8%;
+    height: 8%;
+}
+.resizing{
+    width: 16%;
+    height: 14%;
+}
+#loresize{
+    width: 10%;
+    height: 10%;
+}
+
+#loicresize{
+    max-width: 100%;
+}
+#loic{
+    margin: 0%;
+    padding:0%;
+}
+#fcon{
+    display:grid;
+    grid-template-columns: auto;
+    
+}
+#scon{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+#obj1{
+    display:flex;
+    flex-flow: row;
+    color: royalblue;
+}
+#obj2{
+    display:flex;
+    flex-flow: row;
+    color: royalblue;
+}
+header{
+    padding: 1% 9%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background: white;
+}
+html:not([data-scroll='0']) {
+    padding-top: 3em;
+  }
+html:not([data-scroll='0'])  header {
+    margin-left: 2%;
+    top:0;
+    position: fixed;
+    z-index: 3;
+  }
+#menus{
+    font-size: small;
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    grid-gap: 4%;
+}
+
+#slider{
+    object-fit: cover;
+    height: 600px;
+    border-radius: 10px;
+    background:  royalblue;
+    overflow: hidden;
+}
+.slides{
+    width: 500px;
+    height: 600px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    object-fit: cover;
+    height: 600px;
+    transition: 2s;
+}
+.slide img{
+    width: 1520px;
+    height: 600px;
+}
+
+/* css for manual slide navigation*/
+
+.nav-manual{
+   position:absolute;
+    width: 800px;
+    margin-top: -40px;
+    margin-left: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.manual-btn{
+    border: 2px solid gainsboro;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+    z-index: 2;
+}
+.manual-btn:hover{
+    background: gainsboro;
+}
+#radio1:checked ~ .first{
+    margin-right: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-right: -1520px;
+}
+
+/*for automatic navigation*/
+
+.nav-auto{
+     position: absolute;
+     display:flex;
+     width:800px;
+     margin-top: 560px;
+     justify-content: center;
+}
+.nav-auto div{
+     border: 2px solid gainsboro;
+     padding: 5px;
+     border-radius: 10px;
+     transition: 1s;
+}
+.nav-auto div:not(:last-child){
+    margin-left: 800px;
+     margin-right: 40px;
+     z-index: 1;
+}
+#radio1:checked ~ .nav-auto .auto-btn1{
+     background: gainsboro;
+}
+#radio2:checked ~ .nav-auto .auto-btn1{
+    background: gainsboro;
+}
+/* for the texts on the hero image*/
+
+.texts{
+    position: absolute;
+    z-index: 0;
+    display: block;
+    color: white;
+    width: 350px;
+    height: 200px;
+    margin-top: -310px;
+    margin-left: 10px;
+
+}
+.texts #servtxt{
+    padding: 6%;
+    background: black;
+    animation-name: servtxt;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+.texts #provtxt{
+    padding: 6%;
+    margin-top: -6%;
+    background: royalblue;
+    animation-name: provtxt;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes servtxt{
+    from{margin-left: 800px; width: 350px;}
+    to{margin-left: 20px; width: 350px;}
+}
+@keyframes provtxt{
+    from{margin-left: 800px; width: 350px;}
+    to{margin-left: 20px; width: 350px;}
+}
+a{
+    text-decoration: none;
+    color: royalblue;
+}
+#grid-sect{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+#arrow11{
+    width: 10%;
+    height:10%;
+}
+
+#trdsect{
+    background: linear-gradient(rgba(255, 255, 255, 0.2)), url('images/carousel2') no-repeat center fixed;
+    background-size: cover;
+    display:grid;
+    grid-template-columns: 737px 620px;
+    grid-template-rows: 387px;
+}
+#trdsect p{
+    margin-top: -100px;
+    margin-left: 9%;
+}
+#fthsect{
+    padding-left: 5%;
+    background: royalblue;
+    display: grid;
+    grid-gap: 2%;
+    grid-template-columns: 256px 256px 256px 535px;
+    grid-template-rows: 224px;
+}
+.bimg{
+    position:absolute;
+}
+#navwimg{
+    background: red;
+    border-radius: 100%;
+    margin-left: 34%;
+    border: 4px solid white;
+    padding: 8%;
+    width: 10%;
+    height: 10%;
+}
+#navaimg{
+    background: red;
+    border-radius: 100%;
+    margin-left: 34%;
+    border: 4px solid white;
+    padding: 5% 8% 12% 8%;
+    width: 10%;
+    height: 10%;
+}
+#navoimg{
+    background: red;
+    border-radius: 100%;
+    margin-left: 34%;
+    border: 4px solid white;
+    padding: 8%;
+    width: 10%;
+    height: 10%;
+}
+#navw{
+    color: white;
+    text-align: center;
+}
+#nava{
+    color: white;
+    text-align: center;
+}
+
+#navo{
+    color: white;
+    text-align: center;
+}
+
+.moimg{
+    width: 269px;
+    height: 180px;
+}
+.caimg{
+    width: 227px;
+    height: 180px;
+}
+.waimg{
+    width: 320px;
+    height: 180px;
+}
+.ddimg{
+    width: 380px;
+    height: 180px;
+}
+#slider2{
+    padding: 3% 9%;
+    object-fit: cover;
+    background:  white;
+    overflow: hidden;
+}
+#slider2 h2{
+    padding-left: 5%;
+}
+.slides2{
+    object-fit: cover;
+    background: white;
+    display: flex;
+    overflow: hidden;
+}
+.slides2 input{
+    display: none;
+}
+.slides2 .none{
+    visibility:hidden;
+}
+.slide2{
+    margin-right: 2%;
+    margin-bottom: 1%;
+    object-fit: cover;
+    transition: 2s;
+}
+.slide2 p{
+    max-width: 300px;
+}
+
+/* css for manual slide navigation*/
+
+.nav-manual2{
+   position:absolute;
+    width: 800px;
+    margin-top: 18px;
+    margin-left: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.manual-btn2{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn2:not(:last-child){
+    margin-right: 40px;
+    z-index: 2;
+}
+.manual-btn2:hover{
+    background: black;
+}
+#radio11:checked ~ .first2{
+    margin-right: 0%;
+}
+#radio22:checked ~ .first2{
+    margin-right: -27%;
+}
+#radio33:checked ~ .first2{
+    margin-right: -54%;
+}
+#radio44:checked ~ .first2{
+    margin-right: -82%;
+}
+/*for automatic navigation*/
+
+.nav-auto2{
+    position:absolute;
+    width: 800px;
+    margin-top: 410px;
+    margin-left: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-auto2 div{
+     border: 2px solid black;
+     padding: 5px;
+     border-radius: 10px;
+     transition: 1s;
+}
+.nav-auto2 div:not(:last-child){
+   /* margin-left: 40px;*/
+     margin-right: 40px;
+     z-index: 1;
+}
+#radio11:checked ~ .nav-auto2 .auto-btn11{
+     background: black;
+}
+#radio22:checked ~ .nav-auto2 .auto-btn22{
+    background: black;
+}
+#radio33:checked ~ .nav-auto2 .auto-btn33{
+    background: black;
+}
+#radio44:checked ~ .nav-auto2 .auto-btn44{
+    background: black;
+}
+#contactsect{
+    color: white;
+    background: black;
+    padding: 3% 9% 3% 11%;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:2%;
+}
+
+form{
+    display:grid;
+    grid-template-rows: repeat(6, auto);
+    grid-template-columns: auto;
+}
+form h2{
+    text-align:center;
+}
+h2{
+    margin-bottom: 5%;
+}
+#namebox{
+    margin-bottom: 5%;
+    height: 80%;
+}
+#emailbox{
+    margin-bottom: 5%;
+    height: 80%;
+}  
+#subjectbox{
+    margin-bottom: 5%;
+    height: 80%;
+}
+#commentbox{
+    margin-bottom: 0%;
+    height: 80%;
+}
+#submitbutton{
+    margin-bottom: 5%;
+    height: 80%;
+}
+#abmisect{
+    padding: 2% 10%;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2%;
+}
+#con11{
+    color:white;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: royalblue;
+    padding: 7% 20%;
+}
+#con22{
+    color:white;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: orange;
+    padding: 7% 20%;
+}
+#con33{
+    color:white;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: darkslategray;
+    padding: 7% 20%;
+}
+.conaimg{
+    width: 80%;
+    height: 80%;
+}
+#extrainfo{
+    color: white;
+    background-image:linear-gradient(42deg, rgb(29,114,201) 0% 50%, rgb(0, 0, 0) 50% 100%);
+    padding: 2% 10%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+#absrezimg{
+    margin-top: 10px;
+}
+#ftext{
+    color:white;
+    font-family: cursive;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#ftext #ft1{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+#ftext #ft2{
+    padding-top: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#middle{
+    padding-left: 80%;
+}
+.phimg{
+    background: white;
+    margin: 120% 0%;
+    padding: 20% 20%;
+    border: 5px solid rgb(29,114,201);
+    border-radius: 100%;
+}
+#stext{
+    margin: 28% 0% 0% 5%;
+    color:white;
+    font-family: cursive;
+    font-size: 1.5em;
+    font-weight: bold
+}
+#customlinks{
+    color: white;
+    background: black;
+    display: grid;
+    margin-bottom: 0;
+    padding: 0% 10%;
+    grid-template-rows: auto;
+}
+.whitelinks{
+    text-decoration: none;
+    color:white;
+}
+
+#fconf{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+#gimg1{
+    width: 20px;
+    height: 20px;
+    margin-right: 2%;
+}
+#gimg2{
+    width: 20px;
+    height: 20px;
+    margin-right: 2%;
+}
+#git1{
+    display: flex;
+}
+#git2{
+    display: flex;
+}
+footer{
+    color: white;
+    padding: 2% 9% 2% 10%;
+    background: black;
+    display:flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 900px){
+    #fcon{
+        grid-row: 1/2;
+    }
+    #scon{
+        grid-row: 2/3;
+        padding-top: 2%;
+    }
+    .mobilepad{
+        padding-bottom: 2%;
+    }
+    #loic{
+        align-items: center;
+    }
+}
+
+@media (min-width: 1000px){
+    #fcon{
+        grid-column: 1/2;
+    }
+    #scon{
+        grid-column: 3/4;
+    }
+    #obj1{
+        grid-column: 1/2;
+    }
+    #obj2{
+        grid-column: 2/3;
+    }
+    #con1{
+        grid-column: 1/2;
+    }
+    #con2{
+        grid-column: 2/3;
+    }
+    #con3{
+        grid-column: 3/4;
+    }
+    #con4{
+        grid-column: 4/5;
+    }
+    #home{
+        grid-column: 1/2;
+    }
+    #aus{
+        grid-column: 2/3;
+    }
+    #serv{
+        grid-column: 3/4;
+    }
+    #pages{
+        grid-column: 4/5;
+    }
+    #gal{
+        grid-column: 5/6;
+    }
+    #blog{
+        grid-column: 6/7;
+    }
+    #con{
+        grid-column: 7/8;
+    }
+    #trdsect{
+        grid-row: 1/2;
+    }
+    #fthsect{
+        grid-row: 2/3;
+    }
+    #navw{
+        grid-column: 1/2;
+    }
+    #nava{
+        grid-column: 2/3;
+    }
+    #navo{
+        grid-column: 3/4;
+    }
+    .fdivgrid{
+        grid-column: 1/2;
+    }
+    #absimg{
+        grid-column: 2/3;
+    }
+    #conimg{
+        grid-column: 1/2;
+    }
+    #conform{
+        grid-column: 2/3;
+    }
+    h2{
+        grid-row: 1/2;
+    }
+    #namebox{
+        grid-row:2/3;
+    }
+    #emailbox{
+        grid-row: 3/4;
+    }
+    #subjectbox{
+        grid-row:4/5;
+    }
+    #commentbox{
+        grid-row: 5/6;
+    }
+    #submitbutton{
+        grid-row:6/7;
+    }
+    .counters{
+        grid-column: 1/2;
+    }
+    .about{
+        grid-column: 3/4;
+    }
+    .mission{
+        grid-column: 4/5;
+    }
+    .conaimg{
+        grid-column: 1/2;
+    }
+    #con1txt{
+        grid-column: 2/3;
+    }
+    #ftext{
+        grid-column: 1/2;
+    }
+    #middle{
+        grid-column: 2/3;
+    }
+    #stext{
+        grid-column: 3/4;
+    }
+    #absimg2{
+        grid-column: 4/5;
+    }
+    #aboutus{
+        grid-column: 1/2;
+    }
+    #fconf{
+        grid-row:1/2;
+    }
+    #sconf{
+        grid-row:2/3;
+    }
+    #quicklinks1{
+        grid-column: 2/3;
+    }
+    #quicklinks2{
+        grid-column: 3/4;
+    }
+    #getintouch{
+        grid-column: 4/5;
+    }
+    #sconf{
+        grid-column: 1/5;
+        grid-row: 2/3;
+    }
+    
+    
+
+
+
+
+
+
+}
+
+
